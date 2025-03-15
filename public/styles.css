@@ -1,4 +1,13 @@
 /* General Styles */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.container {
+  max-width: 100%; /* Ensure containers don't exceed viewport width */
+  padding: 0 15px; /* Add padding for smaller screens */
+}
 .hero,
 .about,
 .services,
@@ -14,6 +23,7 @@ body {
   padding: 0;
   color: #333;
   line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .container {
@@ -35,21 +45,21 @@ body {
 }
 
 .whatsapp-fixed img {
-  width: 60px; /* Default size */
-  height: 60px; /* Default size */
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(21, 95, 38, 0.2);
   transition: transform 0.3s ease;
 }
 
 .whatsapp-fixed img:hover {
-  transform: scale(1.1); /* Slightly enlarge on hover */
+  transform: scale(1.1);
 }
 
-/* Hide the WhatsApp button on screens smaller than or equal to 768px */
+/* Hide the WhatsApp button on smaller screens */
 @media (max-width: 768px) {
   .whatsapp-fixed {
-      display: none; /* Hide the button */
+    display: none;
   }
 }
 
@@ -138,7 +148,7 @@ header .logo img {
   max-height: 70px;
   width: auto;
   margin-left: 20px;
-  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.7)); /* Stronger shadow for visibility */
+  filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.7));
   transition: transform 0.3s ease;
   border-radius: 10px;
 }
@@ -197,26 +207,26 @@ nav ul li a:hover {
 
   nav ul {
     position: fixed;
-    top: 50px; /* Adjust based on header height */
-    right: -100%; /* Hide the menu off-screen */
+    top: 50px;
+    right: -100%;
     flex-direction: column;
-    background: #237dec; /* Adjust background color */
-    width: 30%; /* Adjust width as needed */
+    background: #0a6fea;
+    width: 30%;
     text-align: center;
     transition: right 0.3s;
-    z-index: 100; /* Ensure it appears above other elements */
-    padding: 10px 0; /* Add padding for better spacing */
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    z-index: 100;
+    padding: 10px 0;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
   }
 
   nav ul.active {
-    right: 0; /* Slide the menu into view */
+    right: 0;
   }
 
   /* Adjust logo size for mobile */
   header .logo img {
     margin-top: -20px;
-    margin-left: 10px;  /* Optimized for smaller screens */
+    margin-left: 10px;
   }
 
   .logo {
@@ -227,9 +237,9 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-  padding: 0 0; /* Slightly more padding for the hero section */
+  padding: 0;
   height: 100vh;
-  background: url('https://images.unsplash.com/photo-1523961131990-5ea7c61b2107') no-repeat center center/cover;
+  background: url("image/background image/image bG.webp") no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -239,19 +249,16 @@ nav ul li a:hover {
 
 @keyframes hero-bg-animation {
   0% {
-    background-image: url('https://images.unsplash.com/photo-1523961131990-5ea7c61b2107');
+    background-image: url("image/background image/image bG.webp");
   }
-
   33% {
-    background-image: url("website.png"); /* Ensure this path is correct */
+    background-image: url("image/background image/website.webp");
   }
-
   66% {
-    background-image: url('https://images.unsplash.com/photo-1523961131990-5ea7c61b2107');
+    background-image: url("image/background image/image bG.webp");
   }
-
   100% {
-    background-image: url('Digital marketing.png'); /* Ensure this path is correct */
+    background-image: url("image/background image/Digital marketing.webp");
   }
 }
 
@@ -275,7 +282,7 @@ nav ul li a:hover {
 
 .hero-title {
   font-size: 2.5rem;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   display: inline-block;
   transition: color 0.3s ease, transform 0.3s ease;
 }
@@ -341,42 +348,23 @@ nav ul li a:hover {
 /* Responsive Design for max-width: 768px */
 @media (max-width: 768px) {
   .hero {
-    height: 70vh; /* Adjust height for smaller screens */
-    animation: hero-bg-animation-mobile 5s infinite; /* Use a separate animation for mobile */
-  }
-
-  @keyframes hero-bg-animation-mobile {
-    0% {
-      background-image: url('https://images.unsplash.com/photo-1523961131990-5ea7c61b2107');
-    }
-
-    33% {
-      background-image: url("website.png"); /* Ensure this path is correct */
-    }
-
-    66% {
-      background-image: url('https://images.unsplash.com/photo-1523961131990-5ea7c61b2107');
-    }
-
-    100% {
-      background-image: url('Digital marketing.png'); /* Ensure this path is correct */
-    }
+    height: 70vh;
   }
 
   .hero-title {
-    font-size: 2rem; /* Adjust font size for smaller screens */
+    font-size: 2rem;
   }
 
   .hero-tagline {
-    font-size: 1.8rem; /* Adjust font size for smaller screens */
+    font-size: 1.8rem;
   }
 
   .hero-paragraph {
-    font-size: 1.5rem; /* Adjust font size for smaller screens */
+    font-size: 1.5rem;
   }
 
   .cta-button {
-    padding: 8px 20px; /* Adjust button size for smaller screens */
+    padding: 8px 20px;
     font-size: 0.9rem;
   }
 }
@@ -424,7 +412,7 @@ nav ul li a:hover {
 .about-why {
   margin-top: 20px;
   font-size: 1.5rem;
-  font-size: bold;
+  font-weight: bold;
 }
 
 .about-tagline {
@@ -541,7 +529,7 @@ nav ul li a:hover {
 
 .clients h1 {
   font-size: 2.0rem;
-  font-size: bold;
+  font-weight: bold;
   color: #333;
   margin-top: -5px;
   text-align: center;
@@ -609,6 +597,150 @@ nav ul li a:hover {
   }
 }
 
+/* Stacking Cards Section */
+#stacking-cards-section {
+  background-image: url("/public/image/background image/website.webp");
+  display: flex; /* Use flexbox for layout */
+  margin-top: 50px; /* Add margin to avoid overlapping with the header */
+}
+
+/* Company Info Div (Fixed) */
+#company-info {
+  margin-top: 60px;
+  width: 50%; /* Fixed width for company info */
+  background-color: rgb(75, 75, 75); /* Light background */
+  margin-left: 60px; /* Adjust margin to align properly */
+  display: flex;
+  height: 320px;
+  width: 400vh; /* Full height */
+  flex-direction: column; /* Stack content vertically */
+  
+}
+.card {
+  background-color: #ffffff; /* White background */
+  border: 1px solid #e0e0e0; /* Light gray border */
+  border-radius: 18px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px; /* Padding inside the card */
+  max-width: 600px; /* Maximum width of the card */
+  margin: 20px auto; /* Center the card horizontally */
+  text-align: center; /* Center text */
+}
+
+.card h1 {
+  font-size: 24px; /* Larger font size for the heading */
+  margin-bottom: 15px; /* Space below the heading */
+  color: #f7ff04; /* Dark gray color for the heading */
+}
+
+.card p {
+  font-size: 16px; /* Font size for the paragraph */
+  color: #3eaaf2; /* Medium gray color for the text */
+  line-height: 1.6; /* Line height for better readability */
+}
+
+/* Cards Container (Scrollable) */
+#cards-container {
+  width: 50%; /* Remaining width for cards */
+  margin-left: 30%; /* Push to the right of company-info */
+  /* padding: 50px 0; Padding for spacing */
+  overflow-y: auto; /* Scrollable cards */
+  height: 100vh; /* Full viewport height */
+  width: 680vh;
+}
+
+/* Individual Card Styling */
+.stacking-card {
+  width: 80%; /* Card width */
+  max-width: 800px; /* Max width for larger screens */
+  height: 400px; /* Fixed height for each card */
+  background: #fff; /* White background */
+  border-radius: 20px; /* Rounded corners */
+  display: flex; /* Flex layout for content */
+  align-items: center; /* Center content vertically */
+  justify-content: space-between; /* Space between text and image */
+  padding: 20px; /* Padding inside the card */
+  margin: 20px auto; /* Center the card horizontally */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transitions */
+}
+
+/* Card Content Styling */
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Space between text and image */
+}
+
+.card-text {
+  flex: 1; /* Take remaining space */
+}
+
+.card-text h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-text p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.card-image {
+  flex: 1; /* Take remaining space */
+  overflow: hidden; /* Hide overflow */
+  border-radius: 15px; /* Rounded corners */
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the image area */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  #stacking-cards-section {
+    flex-direction: column; /* Stack vertically on small screens */
+  }
+
+  #company-info {
+    width: 90%; /* Full width on small screens */
+    padding: 10px ; 
+    /* Smaller padding */
+    /* margin-left: -25px; */
+    margin-left: 15px;
+    padding-left: -15px;
+    position: static; /* Remove fixed positioning */
+    height: auto; /* Auto height */
+  }
+
+  #cards-container {
+    width: 100%; /* Full width on small screens */
+    margin-left: 0; /* Reset margin */
+    padding: 20px 10px; /* Smaller padding */
+  }
+
+  .stacking-card {
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Auto height */
+    padding: 15px; /* Smaller padding */
+  }
+
+  .card-content {
+    flex-direction: column; /* Stack text and image */
+  }
+
+  .card-text h2 {
+    font-size: 1.5rem; /* Smaller font size */
+  }
+
+  .card-text p {
+    font-size: 0.9rem; /* Smaller font size */
+  }
+}
+
 /* Services Section */
 .services {
   background: #92a4fe;
@@ -669,7 +801,7 @@ nav ul li a:hover {
 
 /* Call Button Styles */
 .call-button {
-  background-color: rgb(248, 173, 33);
+  background-color: rgb(4, 244, 12);
   color: white;
   padding: 10px 20px;
   border: none;
@@ -682,7 +814,7 @@ nav ul li a:hover {
 }
 
 .call-button:hover {
-  background-color: #45a049;
+  background-color: #ef0202;
   transform: scale(1.05);
 }
 
@@ -726,20 +858,20 @@ nav ul li a:hover {
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-width: 800px; /* Adjust as needed */
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .testimonial-slide {
-  display: none; /* Hide all slides by default */
+  display: none;
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
-  transition: opacity 0.5s ease-in-out; /* Smooth transition */
+  transition: opacity 0.5s ease-in-out;
 }
 
 .testimonial-slide.active {
-  display: block; /* Show only the active slide */
+  display: block;
 }
 
 .client-image {
@@ -747,7 +879,7 @@ nav ul li a:hover {
   height: 100px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 auto 20px; /* Center the image horizontally */
+  margin: 0 auto 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -769,7 +901,7 @@ nav ul li a:hover {
 .client-name {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ff6f61; /* Highlight color for client names */
+  color: #ff6f61;
 }
 
 /* Carousel Buttons */
@@ -828,11 +960,12 @@ nav ul li a:hover {
     height: 60px;
   }
 }
+
 /* Results Section */
 .results {
   padding: 10px 0;
   margin: 80px auto;
-  background: #f9f9f9; /* Light background for contrast */
+  background: #f9f9f9;
   text-align: center;
 }
 
@@ -886,24 +1019,25 @@ nav ul li a:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
   .results-grid {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
 @media (max-width: 480px) {
   .results h2 {
-      font-size: 2rem; /* Smaller font size for mobile */
+    font-size: 2rem;
   }
 
   .results-subtitle {
-      font-size: 1rem; /* Smaller subtitle for mobile */
+    font-size: 1rem;
   }
 }
-/* Contact Section */
+
 /* Contact Section */
 .contact-section {
-  padding: 50px 0; /* Slightly more padding for the contact section */
+  padding: 50px 0;
 }
+
 .contact-section {
   padding: 20px 0 20px;
   background: url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
@@ -911,25 +1045,18 @@ nav ul li a:hover {
   position: relative;
   margin-top: -40px;
   opacity: 0;
-  /* Set initial opacity to 0 for animation */
   animation: slideInRight 1s ease-out forwards;
-  /* Add animation */
 }
 
-/* Keyframes for slideInRight animation */
 @keyframes slideInRight {
   0% {
     transform: translateX(100%);
-    /* Start from the right */
     opacity: 0;
-    /* Fully transparent */
   }
 
   100% {
     transform: translateX(0);
-    /* End at original position */
     opacity: 1;
-    /* Fully opaque */
   }
 }
 
@@ -941,7 +1068,6 @@ nav ul li a:hover {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.6);
-  /* Dark overlay for better text visibility */
   z-index: 1;
 }
 
@@ -968,19 +1094,14 @@ nav ul li a:hover {
   border-radius: 5px;
   font-size: 16px;
   background: rgba(254, 252, 252, 0.9);
-  /* Light background for form fields */
   color: #000000;
 }
 
 #contact-form select {
   appearance: none;
-  /* Remove default arrow */
   -webkit-appearance: none;
-  /* Remove default arrow for Safari */
   -moz-appearance: none;
-  /* Remove default arrow for Firefox */
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
-  /* Custom arrow */
   background-repeat: no-repeat;
   background-position: right 12px center;
   background-size: 12px;
@@ -988,7 +1109,6 @@ nav ul li a:hover {
 
 #contact-form textarea {
   resize: vertical;
-  /* Allow vertical resizing */
   min-height: 150px;
 }
 
@@ -1005,7 +1125,6 @@ nav ul li a:hover {
 
 #contact-form button:hover {
   background: #e6b800;
-  /* Darker shade on hover */
 }
 
 .whatsapp-button {
@@ -1022,7 +1141,6 @@ nav ul li a:hover {
 
 .whatsapp-button:hover {
   background: #128C7E;
-  /* Darker shade on hover */
 }
 
 /* Footer Section */
@@ -1042,7 +1160,7 @@ footer::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.8); /* Dark overlay for better text visibility */
+  background: rgba(0, 0, 0, 0.8);
   z-index: 1;
 }
 
@@ -1068,10 +1186,9 @@ footer .container {
 }
 
 .footer-logo .logo img {
-  max-width: 150px; /* Adjust logo size */
+  max-width: 150px;
   height: auto;
   display: block;
-  /* margin: 0 auto; Center the logo */
 }
 
 .footer-logo p {
@@ -1079,7 +1196,6 @@ footer .container {
   color: #ccc;
   line-height: 1.6;
   margin-left: -60px;
-  
 }
 
 .footer-links h3,
@@ -1092,7 +1208,6 @@ footer .container {
 .footer-links ul {
   list-style: none;
   padding: 0;
-  /* margin-right: -560px; */
 }
 
 .footer-links ul li {
@@ -1166,38 +1281,37 @@ footer .container {
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer-content {
-    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    grid-template-columns: 1fr;
     gap: 20px;
   }
 
   .footer-logo .logo img {
     max-width: 150px;
-     /* Smaller logo for mobile */
-     
   }
+
   .footer-logo .logo {
     margin-left: 40px;
-   
   }
+
   .footer-logo p {
     margin-left: 40px;
   }
 
   .footer-links,
   .footer-contact {
-    text-align: center; /* Center align text on smaller screens */
+    text-align: center;
   }
 
   .footer-contact p {
-    justify-content: center; /* Center align contact info */
+    justify-content: center;
   }
 
   .footer-bottom {
-    flex-direction: column; /* Stack footer bottom links */
+    flex-direction: column;
   }
 
   .footer-bottom a {
-    margin: 5px 0; /* Adjust spacing for mobile */
+    margin: 5px 0;
   }
 }
 
@@ -1206,7 +1320,6 @@ footer .container {
   .hero {
     justify-content: center;
     position: relative;
-
   }
 
   .hero-title {
@@ -1220,21 +1333,21 @@ footer .container {
   .service-grid {
     grid-template-columns: 1fr;
   }
-  .footer-bottom{
-    margin: 40px;
 
+  .footer-bottom {
+    margin: 40px;
   }
-  
+
   .hero,
   .about,
   .services,
   .testimonials,
   .results,
   .contact-section {
-    padding: 30px 0; /* Further reduced padding for mobile */
+    padding: 30px 0;
   }
 
   .hero {
-    padding: 40px 0; /* Slightly more padding for the hero section on mobile */
+    padding: 40px 0;
   }
 }

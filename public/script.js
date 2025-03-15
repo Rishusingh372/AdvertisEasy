@@ -134,55 +134,22 @@ document.querySelector(".carousel-button.prev").addEventListener("click", functi
 
 
 // Show the first slide initially
-showSlide(currentSlide);
+    // Handle form submission
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
 
-  // Handle form submission
-  document.getElementById('contact-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the default form submission
-    // Send the form data using EmailJS
-    emailjs.sendForm('service_vce4u2t', 'template_wkggvbb', this)
-      .then(function (response) {
-        // alert('Message sent successfully!');
-        console.log('SUCCESS!', response.status, response.text);
-      }, function (error) {
-        alert('Failed to send message. Please try again.');
-        console.log('FAILED...', error);
-      });
+        // Send the form data using EmailJS
+        emailjs.sendForm('service_vce4u2t', 'template_wkggvbb', this)
+            .then(function (response) {
+                alert('Message sent successfully! '); // Show success message
+                console.log('SUCCESS!', response.status, response.text);
+                document.getElementById('contact-form').reset(); // Clear the form
+            }, function (error) {
+                alert('Failed to send message. Please try again.'); // Show error message
+                console.log('FAILED...', error);
+            });
+    });
 
-  });
-  // sever conection  
-
-  // Form submission with MongoDB integration
-  document.getElementById('contact-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    // Get form data
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const service = document.getElementById("service").value;
-    const number = document.getElementById('number').value;
-    const message = document.getElementById('message').value;
-
-
-
-    // Send data to the server
-    // fetch('/submit-form', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify({ name, email, service, message, number })
-    // })
-    //   .then(response => response.json())
-    //   .then(data => {
-    //     alert(data.message); // Show success message
-    //     document.getElementById('contact-form').reset(); // Clear the form
-    //   })
-    //   .catch(error => {
-    //     console.error('Error:', error);
-    //     alert('Error submitting form');
-    //   });
-  });
   // Change header background on scroll
   window.addEventListener("scroll", () => {
     const header = document.querySelector("header");

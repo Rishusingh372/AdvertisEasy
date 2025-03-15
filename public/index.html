@@ -16,7 +16,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
+    <script src="script.js" type="text/javascript"></script>
     <script type="text/javascript">
+
         (function () {
             emailjs.init({
                 publicKey: "Dp4-n6V_2klZjESlK",
@@ -26,7 +28,7 @@
 </head>
 
 <body>
-   <!-- WhatsApp Fixed Button -->
+  <!-- WhatsApp Fixed Button -->
 <div class="whatsapp-fixed">
     <a href="https://wa.me/917000250950" target="_blank">
       <img src="https://cdn.pixabay.com/photo/2015/08/03/13/58/whatsapp-873316_1280.png" alt="WhatsApp">
@@ -52,7 +54,7 @@
     <!-- Header -->
     <header>
         <div class="logo">
-            <img src="./transparent_logo.png" alt="Advertiseasy Logo">
+            <img src="transparent_logo.png" alt="Advertiseasy Logo">
         </div>
         <nav class="desktop-nav">
             <div class="hamburger" id="hamburger">
@@ -94,8 +96,7 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="About Us Image"
-                        loading="lazy">
+                    <img src="image/about image.webp" alt="About Us Image" loading="lazy">
                 </div>
                 <div class="about-content">
                     <h2>About</h2>
@@ -138,57 +139,150 @@
             <div class="row gy-4">
                 <!-- Client Logo Items (Original Set) -->
                 <div class="col-xl-2 col-md-3 col-6 client-logo">
-                    <img src="./Clients/AD CarGo Packers And Movers.jpeg" class="img-fluid" alt="Client 1">
+                    <img src="image/Clients image/AD CarGo Packers And Movers.jpeg" class="img-fluid" alt="Client 1">
                 </div><!-- End Client Item -->
 
                 <div class="col-xl-2 col-md-3 col-6 client-logo">
-                    <img src="./Clients/GoCoupon.jpeg" class="img-fluid" alt="Client 2">
+                    <img src="image/Clients image/GoCoupon.jpeg" class="img-fluid" alt="Client 2">
                 </div><!-- End Client Item -->
 
                 <div class="col-xl-2 col-md-3 col-6 client-logo">
-                    <img src="./Clients/Shubho Yatra.jpeg" class="img-fluid" alt="Client 3">
+                    <img src="image/Clients image/Shubho Yatra.jpeg" class="img-fluid" alt="Client 3">
                 </div><!-- End Client Item -->
 
                 <div class="col-xl-2 col-md-3 col-6 client-logo">
-                    <img src="./Clients/Swastika Services Hub.jpeg" class="img-fluid" alt="Client 4">
+                    <img src="image/Clients image/Swastika Services Hub.jpeg" class="img-fluid" alt="Client 4">
                 </div><!-- End Client Item -->
 
                 <div class="col-xl-2 col-md-3 col-6 client-logo">
-                    <img src="./Clients/Top Best Page Builder.jpeg" class="img-fluid" alt="Client 5">
+                    <img src="image/Clients image/Top Best Page Builder.jpeg" class="img-fluid" alt="Client 5">
                 </div><!-- End Client Item -->
 
                 <div class="col-xl-2 col-md-3 col-6 client-logo">
-                    <img src="./Clients/Vijay Studio Pvt.Ltd.1.jpeg" class="img-fluid" alt="Client 6">
-                </div><!-- End Client Item -->
-
-                <!-- Duplicate Client Logo Items (Repeat Set) -->
-                <!-- <div class="col-xl-2 col-md-3 col-6 client-logo">
-                    <img src="./Clients/Easy.png" class="img-fluid" alt="Client 1">
-                </div>End Client Item -->
-
-                <div class="col-xl-2 col-md-3 col-6 client-logo">
-                    <img src="./Clients/Diwakar art Logo.png" class="img-fluid" alt="Client 2">
+                    <img src="image/Clients image/Vijay Studio Pvt.Ltd.1.jpeg" class="img-fluid" alt="Client 6">
                 </div><!-- End Client Item -->
 
                 <div class="col-xl-2 col-md-3 col-6 client-logo">
-                    <img src="./Clients/AD CarGo Packers And Movers.jpeg" class="img-fluid" alt="Client 3">
+                    <img src="image/Clients image/Diwakar art Logo.png" class="img-fluid" alt="Client 2">
                 </div><!-- End Client Item -->
 
                 <div class="col-xl-2 col-md-3 col-6 client-logo">
-                    <img src="./Clients/Vijay Studio Pvt.Ltd.1.jpeg" class="img-fluid" alt="Client 4">
+                    <img src="image/Clients image/AD CarGo Packers And Movers.jpeg" class="img-fluid" alt="Client 3">
                 </div><!-- End Client Item -->
 
                 <div class="col-xl-2 col-md-3 col-6 client-logo">
-                    <img src="./Clients/Top Best Page Builder.jpeg" class="img-fluid" alt="Client 5">
+                    <img src="image/Clients image/GoCoupon.jpeg" class="img-fluid" alt="Client 4">
                 </div><!-- End Client Item -->
 
-                <!-- <div class="col-xl-2 col-md-3 col-6 client-logo">
-                    <img src="./Clients/Easy.png" class="img-fluid" alt="Client 6">
-                </div>End Client Item -->
+                <div class="col-xl-2 col-md-3 col-6 client-logo">
+                    <img src="/image/Clients image/GoCoupon.jpeg" class="img-fluid" alt="Client 4">
+                </div><!-- End Client Item -->         
+
             </div>
         </div>
     </section><!-- /Clients Section -->
 
+    <!-- Stacking Cards Section -->
+    <div id="stacking-cards-section">
+        <!-- Company Info Div (Fixed) -->
+        <div id="company-info" class="card">
+            <h1>Grow Faster with Expert Digital Marketing Services</h1>
+            <p>📊 At Advertiseasy, we help businesses grow online with high-converting ad campaigns and data-driven strategies. Whether you're looking for leads, sales, or brand awareness – we make it happen..</p>
+        </div>
+
+        <!-- Cards Container (Scrollable) -->
+        <div id="cards-container">
+            <!-- Card 1: Web Development -->
+            <div class="stacking-card">
+                <div class="card-content">
+                    <div class="card-text">
+                        <h2>Web Development</h2>
+                        <div class="card-image">
+                            <img src="/public/image/background image/website.webp" alt="Web Development">
+                        </div>
+                        <p>We create clean, fast, and mobile-friendly websites that help grow your business online.</p>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Card 2: Google Ads-->
+            <div class="stacking-card">
+                <div class="card-content">
+                    <div class="card-text">
+                        <h2>Google Ads</h2>
+                        <div class="card-image">
+                            <img src="/public/image/cards/google.webp" alt="App Development">
+                        </div>
+                        <p>Show your business at the top of Google and get more calls, leads, and customers quickly.</p>
+                    </div>
+                </div>
+            </div>
+              <!-- Card 3: Facebook Ads<-->
+              <div class="stacking-card">
+                <div class="card-content">
+                    <div class="card-text">
+                        <h2>Facebook Ads</h2>
+                        <div class="card-image">
+                            <img src="/public/image/cards/facebook.webp" alt="App Development">
+                        </div>
+                        <p>Reach more people on Facebook & Instagram and turn them into real customers with smart ads.</p>
+                    </div>
+                </div>
+            </div>
+              <!-- Card 4: Lead Generation-->
+              <div class="stacking-card">
+                <div class="card-content">
+                    <div class="card-text">
+                        <h2>Lead Generation</h2>
+                        <div class="card-image">
+                            <img src="/public/image/cards/Led.webp">
+                        </div>
+                        <p>We bring you real and interested leads who are ready to buy your products or services</p>
+                    </div>
+                </div>
+            </div>
+              <!-- Card 5: Brand Awareness -->
+              <div class="stacking-card">
+                <div class="card-content">
+                    <div class="card-text">
+                        <h2>Brand Awareness </h2>
+                        <div class="card-image">
+                            <img src="/public/image/cards/Brand.webp">
+                        </div>
+                        <p>Make your brand known! We help more people discover, trust, and remember your business online.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Digital Marketing -->
+            <div class="stacking-card">
+                <div class="card-content">
+                    <div class="card-text">
+                        <h2>Digital Marketing</h2>
+                        <div class="card-image">
+                            <img src="/public/image/background image/Digital marketing.webp" alt="Digital Marketing">
+                        </div>
+                        <p>Boost your online visibility and engagement with AdvertisEasy, a trusted digital marketing company in Bhopal, offering expert SEO, social media, PPC, and content marketing services.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 7: Performance Marketing -->
+            <div class="stacking-card">
+                <div class="card-content">
+                    <div class="card-text">
+                        <h2>Performance Marketing</h2>
+                        <div class="card-image">
+                            <img src="/public/image/cards/perfomance.webp" alt="Digital Marketing">
+                        </div>
+                        <p>You get results, not just clicks. We run ad campaigns focused on sales and business growth.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more cards as needed -->
+        </div>
+    </div>
     <!-- Service Section -->
 
     <section class="services" id="services">
@@ -197,67 +291,72 @@
           <!-- Healthcare -->
           <a href="#" class="service-card">
             <h3>Healthcare</h3>
-            <p>Google Ads & Facebook Ads for patient bookings. Local SEO to rank on Google Maps & search results. Online Reputation Management (reviews & ratings). Social Media Marketing for brand awareness.</p>
             <div class="service-image">
-              <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef" alt="Healthcare Image">
-            </div>
+                <img src="/public/image/Our Service/Healthcare.webp" alt="Healthcare Image">
+              </div>
+            <p>Google Ads & Facebook Ads for patient bookings. Local SEO to rank on Google Maps & search results. Online Reputation Management (reviews & ratings). Social Media Marketing for brand awareness.</p>
+            
             <button class="call-button" data-phone="+1234567890">Claim Your 7-Days Free Trial Now! →</button>
           </a>
     
           <!-- Real Estate & Builders -->
           <a href="#" class="service-card">
             <h3>Real Estate & Builders</h3>
-            <p>Lead Generation for property buyers & investors. Facebook & Instagram Ads for project promotions. SEO for ranking real estate websites. Virtual Tours & Video Marketing for property showcasing.</p>
             <div class="service-image">
-              <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6" alt="Real Estate Image">
-            </div>
+                <img src="/public/image/Our Service/Real Estate & Builders.webp" alt="Real Estate Image">
+              </div>
+            <p>Lead Generation for property buyers & investors. Facebook & Instagram Ads for project promotions. SEO for ranking real estate websites. Virtual Tours & Video Marketing for property showcasing.</p>
+            
             <button class="call-button" data-phone="+1234567890">Claim Your 7-Days Free Trial Now! →</button>
           </a>
     
           <!-- E-commerce & Retail -->
           <a href="#" class="service-card">
             <h3>E-commerce & Retail</h3>
-            <p>Google Shopping Ads for more product sales. Amazon, Flipkart & Shopify Marketing. Social Media Ads (Instagram & Facebook). Email & SMS Marketing for repeat customers.</p>
             <div class="service-image">
-              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d" alt="E-commerce Image">
-            </div>
+                <img src="/public/image/Our Service/E-commerce & Retail.webp" alt="E-commerce Image">
+              </div>
+            <p>Google Shopping Ads for more product sales. Amazon, Flipkart & Shopify Marketing. Social Media Ads (Instagram & Facebook). Email & SMS Marketing for repeat customers.</p>
+            
             <button class="call-button" data-phone="+1234567890">Claim Your 7-Days Free Trial Now! →</button>
           </a>
     
           <!-- Education & Coaching Centers -->
           <a href="#" class="service-card">
             <h3>Education & Coaching Centers</h3>
-            <p>Google Ads & Facebook Ads for student enrollments. SEO & Content Marketing for ranking courses. YouTube Marketing for educational content. Lead Generation for admissions & inquiries.</p>
             <div class="service-image">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Education Image">
-            </div>
+                <img src="/public/image/Our Service/Education & Coaching Centers.webp" alt="Education Image">
+              </div>
+            <p>Google Ads & Facebook Ads for student enrollments. SEO & Content Marketing for ranking courses. YouTube Marketing for educational content. Lead Generation for admissions & inquiries.</p>
+           
             <button class="call-button" data-phone="+1234567890">Claim Your 7-Days Free Trial Now! →</button>
           </a>
     
           <!-- Hospitality & Restaurants -->
           <a href="#" class="service-card">
             <h3>Hospitality & Restaurants</h3>
-            <p>Local SEO & Google My Business Optimization. Facebook & Instagram Ads for bookings & reservations. Influencer & Review Marketing. WhatsApp & SMS Marketing for offers.</p>
             <div class="service-image">
-              <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9" alt="Hospitality Image">
-            </div>
+                <img src="/public/image/Our Service/Hospitality & Restaurants.webp" alt="Hospitality Image">
+              </div>
+            <p>Local SEO & Google My Business Optimization. Facebook & Instagram Ads for bookings & reservations. Influencer & Review Marketing. WhatsApp & SMS Marketing for offers.</p>
             <button class="call-button" data-phone="+1234567890">Claim Your 7-Days Free Trial Now! →</button>
           </a>
     
           <!-- Home Services -->
           <a href="#" class="service-card">
             <h3>Home Services</h3>
-            <p>Local SEO to rank in city searches. Google Ads & Facebook Ads for bookings. WhatsApp & Call-Based Marketing for inquiries. Review & Reputation Management.</p>
             <div class="service-image">
-              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952" alt="Home Services Image">
+                <img src="/public/image/Our Service/Home Services.webp" alt="Home Services Image">
             </div>
+            <p>Local SEO to rank in city searches. Google Ads & Facebook Ads for bookings. WhatsApp & Call-Based Marketing for inquiries. Review & Reputation Management.</p>
+            
             <button class="call-button" data-phone="+1234567890">Claim Your 7-Days Free Trial Now! →</button>
           </a>
         </div>
       </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
+       <!-- Testimonials Section -->
+       <section class="testimonials">
         <h2>What Our Clients Say</h2>
         <div class="testimonial-carousel">
             <!-- Slides -->
@@ -293,25 +392,31 @@
         <p class="results-subtitle">See the impact we've made for our clients.</p>
         <div class="results-grid">
             <div class="result-item">
-                <div class="result-image"><img src="./Result/1.png" alt="Result 1"></div>
+                <div class="result-image"><img src="/public/image/Result image/1.png" alt="Result 1"></div>
             </div>
             <div class="result-item">
-                <div class="result-image"><img src="./Result/2.png" alt="Result 2"></div>
+                <div class="result-image"><img src="/public/image/Result image/2.png" alt="Result 2"></div>
             </div>
             <div class="result-item">
-                <div class="result-image"><img src="./Result/3.png" alt="Result 3"></div>
+                <div class="result-image"><img src="/public/image/Result image/3.png" alt="Result 3"></div>
             </div>
             <div class="result-item">
-                <div class="result-image"><img src="./Result/4.png" alt="Result 4"></div>
+                <div class="result-image"><img src="/public/image/Result image/4.png" alt="Result 4"></div>
             </div>
             <div class="result-item">
-                <div class="result-image"><img src="./Result/5.png" alt="Result 5"></div>
+                <div class="result-image"><img src="/public/image/Result image/5.png" alt="Result 5"></div>
             </div>
             <div class="result-item">
-                <div class="result-image"><img src="./Result/6.png" alt="Result 6"></div>
+                <div class="result-image"><img src="/public/image/Result image/6.png" alt="Result 6"></div>
             </div>
             <div class="result-item">
-                <div class="result-image"><img src="./Result/7.png" alt="Result 7"></div>
+                <div class="result-image"><img src="/public/image/Result image/7.png" alt="Result 7"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-image"><img src="/public/image/Result image/8.png" alt="Result 7"></div>
+            </div>
+            <div class="result-item">
+                <div class="result-image"><img src="/public/image/Result image/9.png" alt="Result 7"></div>
             </div>
         </div>
     </div>
@@ -327,14 +432,12 @@
                 <input type="number" id="number" name="number" placeholder="Phone Number" required>
                 <select id="service" name="service" required>
                     <option value="" disabled selected>Select Your Service</option>
-                    <option value="web-design">Google Ads</option>
-                    <option value="seo">Facebook Ads</option>
-                    <option value="content-writing">Website Design</option>
-                    <option value="consulting">Lead Generation</option>
-                    <option value="consulting">Brand Awareness</option>
-                    <option value="consulting">Performance Marketing</option>
-
-
+                    <option value="Google Ads">Google Ads</option>
+                    <option value="Facebook Ads">Facebook Ads</option>
+                    <option value="Website Design">Website Design</option>
+                    <option value="Lead Generation">Lead Generation</option>
+                    <option value="Brand Awareness">Brand Awareness</option>
+                    <option value="Performance Marketing">Performance Marketing</option>
                 </select>
                 <textarea id="message" name="message" placeholder="Your Message" required></textarea>
                 <button type="submit" id="submit">Send Message</button>
@@ -351,7 +454,7 @@
                 <div class="logo">
                     <img src="./transparent_logo.png" alt="Advertiseasy Logo" class="footer-logo-img">
                 </div>
-                <p>Your reliable partner for safe and comfortable rides.</p>
+                <p>Advertiseasy helps your business get more leads, more customers, and more growth with result-driven digital marketing services tailored just for you.</p>
             </div>
             <div class="footer-links">
                 <h3>Quick Links</h3>
@@ -380,11 +483,6 @@
             <a href="./Privacy/Terms&Conditions.html">Terms & Conditions</a> |
             <a href="./Privacy/PrivacyPolicy.html">Privacy Policy</a> |
             <a href="./Privacy/Disclaimer.html">Disclaimer</a>
-            
         </div>
     </div>
 </footer>
-
-<script src="script.js"></script>
-</body>
-</html>
